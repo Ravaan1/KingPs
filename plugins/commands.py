@@ -184,7 +184,7 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         if AUTO_DELETE_MODE == True:
-            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
+            k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>💢 Files will be deleted in {AUTO_DELETE} minutes to avoid copyright issues ‼️. Please forward and save them ♻️.</u></b>")
             await asyncio.sleep(AUTO_DELETE_TIME)
             for x in filesarr:
                 try:
@@ -241,7 +241,7 @@ async def start(client, message):
                     )
                 )
             if AUTO_DELETE_MODE == True:
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>💢 Files will be deleted in {AUTO_DELETE} minutes to avoid copyright issues ‼️. Please forward and save them ♻️.</u></b>")
                 await asyncio.sleep(AUTO_DELETE_TIME)
                 try:
                     await msg.delete()
@@ -302,7 +302,7 @@ async def start(client, message):
             )
         )
     if AUTO_DELETE_MODE == True:
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>{AUTO_DELETE} minutes</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>💢 Files will be deleted in {AUTO_DELETE} minutes to avoid copyright issues ‼️. Please forward and save them ♻️.</u></b>")
         await asyncio.sleep(AUTO_DELETE_TIME)
         try:
             await x.delete()
@@ -332,7 +332,7 @@ async def base_site_handler(client, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
     cmd = m.command
-    text = f"`/base_site (base_site)`\n\n<b>Current base site: None\n\n EX:</b> `/base_site shortnerdomain.com`\n\nIf You Want To Remove Base Site Then Copy This And Send To Bot - `/base_site None`"
+    text = f"`/base_site (base_site)`\n\n<b>Current base site: None\n\n EX:</b> `/base_site yamlinks.com`\n\nIf You Want To Remove Base Site Then Copy This And Send To Bot - `/base_site None`"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
