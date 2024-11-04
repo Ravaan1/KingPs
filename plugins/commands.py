@@ -1,7 +1,3 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 import os
 import logging
 import random
@@ -25,10 +21,6 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 
 def get_size(size):
     """Get size in readable format"""
@@ -41,10 +33,6 @@ def get_size(size):
         size /= 1024.0
     return "%.2f %s" % (size, units[i])
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ0
-
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
@@ -54,10 +42,8 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
-            ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+            InlineKeyboardButton('🔍 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/+nDTaoJGRKJcxYmZl'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/KR_movie2')
             ],[
             InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
@@ -73,9 +59,6 @@ async def start(client, message):
         )
         return
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
     
     data = message.command[1]
     try:
@@ -107,9 +90,9 @@ async def start(client, message):
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY_MODE == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
+                    InlineKeyboardButton("💫 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ 💫", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
                 ],[
-                    InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+                    InlineKeyboardButton("🤔 ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ 🤔", url=VERIFY_TUTORIAL)
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -164,15 +147,13 @@ async def start(client, message):
                         text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                         quote=True,
                         disable_web_page_preview=True,
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                                                            InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),  # we download Link
+                                                            InlineKeyboardButton('ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', url=stream)]])  # web stream Link
                     )
                 if STREAM_MODE == True:
                     button = [[
-                        InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                        InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
-                    ],[
-                        InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
+                        InlineKeyboardButton("ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),  # we download Link
+                        InlineKeyboardButton('ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', url=stream)
                     ]]
                     reply_markup=InlineKeyboardMarkup(button)
                 else:
@@ -213,18 +194,14 @@ async def start(client, message):
             await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         if not await check_verification(client, message.from_user.id) and VERIFY_MODE == True:
             btn = [[
-                InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
+                InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
             ],[
-                InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+                InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ", url=VERIFY_TUTORIAL)
             ]]
             await message.reply_text(
                 text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -258,7 +235,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}')
+                                InlineKeyboardButton('✧ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ✧', callback_data=f'generate_stream_link:{file_id}')
                             ]
                         ]
                     )
@@ -295,9 +272,9 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     if not await check_verification(client, message.from_user.id) and VERIFY_MODE == True:
         btn = [[
-            InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
+            InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
         ],[
-            InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+            InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ", url=VERIFY_TUTORIAL)
         ]]
         await message.reply_text(
             text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -319,7 +296,7 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}')
+                        InlineKeyboardButton('✧ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ✧', callback_data=f'generate_stream_link:{file_id}')
                     ]
                 ]
             )
@@ -333,10 +310,6 @@ async def start(client, message):
             pass
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")       
         
-
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 @Client.on_message(filters.command('api') & filters.private)
 async def shortener_api_handler(client, m: Message):
@@ -353,9 +326,6 @@ async def shortener_api_handler(client, m: Message):
         await update_user_info(user_id, {"shortener_api": api})
         await m.reply("<b>Shortener API updated successfully to</b> " + api)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 @Client.on_message(filters.command("base_site") & filters.private)
 async def base_site_handler(client, m: Message):
@@ -375,10 +345,6 @@ async def base_site_handler(client, m: Message):
             return await m.reply(text=text, disable_web_page_preview=True)
         await update_user_info(user_id, {"base_site": base_site})
         await m.reply("<b>Base Site updated successfully</b>")
-
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -402,14 +368,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
     
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
-            ],[
             InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
             ],[
@@ -492,7 +453,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
-            xo = await query.message.reply_text(f'🔐')
+            xo = await query.message.reply_text(f'💥')
             await asyncio.sleep(1)
             await xo.delete()
 
@@ -501,8 +462,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 # Ask Doubt on telegram @KingVJ01
 
             button = [[
-                InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
+                InlineKeyboardButton("ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),  # we download Link
+                InlineKeyboardButton('ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', url=stream)
             ]]
             reply_markup=InlineKeyboardMarkup(button)
             await log_msg.reply_text(
@@ -512,10 +473,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup
             )
             button = [[
-                InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
-            ],[
-                InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
+                InlineKeyboardButton("ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),  # we download Link
+                InlineKeyboardButton('ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', url=stream)
             ]]
             reply_markup=InlineKeyboardMarkup(button)
             await query.message.reply_text(
@@ -528,7 +487,3 @@ async def cb_handler(client: Client, query: CallbackQuery):
             print(e)  # print the error message
             await query.answer(f"☣something went wrong\n\n{e}", show_alert=True)
             return
-
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
