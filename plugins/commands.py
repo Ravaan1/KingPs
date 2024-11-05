@@ -43,6 +43,8 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
             InlineKeyboardButton('🔍 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/+nDTaoJGRKJcxYmZl'),
+            ],[
+            InlineKeyboardButton('⚒️ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ', url='https://t.me/TG_BOTS_UPDATE'),
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/KR_movie2')
             ],[
             InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
@@ -372,6 +374,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('🔍 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/+nDTaoJGRKJcxYmZl'),
+            ],[
+            InlineKeyboardButton('⚒️ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ', url='https://t.me/TG_BOTS_UPDATE'),
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/KR_movie2')
             ],[
             InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
